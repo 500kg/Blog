@@ -1,0 +1,64 @@
+---
+title: HDU 3537Daizhenyang's Coin
+date: 2017-08-07 20:15:47
+tags: [博弈]
+categories: [博弈]
+---
+# [HDU-3537 Daizhenyang's Coin](http://acm.hdu.edu.cn/showproblem.php?pid=3537)
+
+## Problem Description
+
+## Input
+
+## Output
+ 
+## Sample Input
+
+## Sample Output
+
+## 题意
+
+## 思路
+
+## 代码
+
+
+## 题意
+
+
+>给你两个数a,b。每轮可以用大的数减去小的正整数倍（不能减到小于0），减到0的胜利。
+
+
+## 思路
+
+
+>对两个数a,b。若a==b先手必胜；对剩下的情况不妨设a>b，若a>2*b||a%b==0则必胜，后者是显然的，而前者可以将它改为(a,b)或(a,b-a)，这两者中必有一种是必败态。若b<a<2\*b则递推计算。
+
+
+## 代码
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n, m;
+	while (scanf("%d%d", &n, &m) == 2)
+	{
+		if (n == 0 & m == 0)break;
+		if (m > n)swap(m, n);
+		int sta = 0;
+		while (m)
+		{
+			if (n%m == 0 || n > 2 * m)break;
+			n = n - m;
+			swap(n, m);
+			sta ^= 1;
+
+		}
+		if (!sta) puts("Stan wins");
+		else puts("Ollie wins");
+	}
+}
+```

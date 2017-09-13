@@ -1,0 +1,11 @@
+
+npm install -g hexo
+npm install hexo-deployer-git --save
+hexo init
+git init
+git config --global user.name "500kg"
+git config --global user.email "2426958134@qq.com"
+git remote add origin git@github.com:500kg/Blog.git
+git fetch --all 
+git reset --hard origin/master
+http://blog.csdn.net/dxxzst/article/details/76135750

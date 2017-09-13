@@ -1,0 +1,12 @@
+git pull
+
+hexo clean
+hexo g
+hexo d
+
+git reset --hard origin/master
+git add .
+git commit -m "หตร๗"
+git push origin master
+
+
