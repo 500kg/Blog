@@ -6,7 +6,7 @@ hexo g
 hexo d
 
 git add .
-git commit -m "17/09/13"
+git commit -m "18/08/29"
 git push origin master
 
 
